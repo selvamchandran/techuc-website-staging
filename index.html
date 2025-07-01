@@ -30,37 +30,124 @@
 </head>
 <body class="bg-white text-gray-800">
 
-<!-- Navbar -->
-<header class="bg-white shadow sticky top-0 z-50">
-  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-    <div class="flex items-center space-x-3">
-      <img src="assets/images/logo.png" alt="TechUC Logo" class="h-10 w-auto" />
+<!-- Top Info Bar -->
+<!-- <div class="bg-gray-100 text-sm text-gray-700 px-4 md:px-16 py-2 flex justify-between items-center">
+  <p>Dmummy Info</p>
+  <div class="flex items-center space-x-6 text-sm">
+    <div class="flex items-center space-x-1">
+      <i data-lucide="phone" class="w-4 h-4"></i>
+      <span>+91 78323 23323</span>
     </div>
-    <nav class="hidden md:flex space-x-6 text-gray-700 font-medium">
-      <a href="#home" class="hover:text-blue-600">Home</a>
-      <a href="about-us.html" class="hover:text-blue-600">About</a>
-      <a href="#services" class="hover:text-blue-600">Services</a>
-      <a href="contact.html" class="hover:text-blue-600">Contact</a>
-    </nav>
-    <a href="#contact" class="hidden md:inline-block bg-blue-600 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 transition">Get in Touch</a>
+    <div class="flex items-center space-x-1">
+      <i data-lucide="clock" class="w-4 h-4"></i>
+      <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+    </div>
+    <div class="flex items-center space-x-1">
+      <i data-lucide="mail" class="w-4 h-4"></i>
+      <span>info@techuc.in</span>
+    </div>
+  </div>
+</div> -->
 
-    <!-- Mobile Menu Icon -->
-    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16" />
+<!-- Top Info Bar -->
+<div class="bg-gray-100 text-sm text-gray-700 px-4 md:px-16 py-2 flex justify-between items-center">
+
+  <!-- Left: Social Icons -->
+  <div class="flex items-center space-x-4">
+    <a href="https://facebook.com/yourpage" target="_blank" class="hover:opacity-80 transition">
+      <svg class="w-5 h-5 fill-blue-600" viewBox="0 0 24 24">
+        <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99h-2.54V12h2.54V9.8c0-2.51 1.5-3.89 3.8-3.89 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.78-1.64 1.58V12h2.8l-.45 2.89h-2.35v6.99C18.34 21.13 22 16.99 22 12z"/>
       </svg>
-    </button>
+    </a>
+
+    <a href="https://linkedin.com/company/yourpage" target="_blank" class="hover:opacity-80 transition">
+      <svg class="w-4 h-4 fill-blue-700" viewBox="0 0 24 24">
+        <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.77 0 5-2.24 5-5v-14c0-2.76-2.23-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 11.28h-3v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85v5.5h-3v-10h2.88v1.36h.04c.4-.75 1.4-1.54 2.88-1.54 3.08 0 3.64 2.03 3.64 4.67v5.51z"/>
+      </svg>
+    </a>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
-    <a href="#home" class="block py-2 text-gray-700">Home</a>
-    <a href="#about" class="block py-2 text-gray-700">About</a>
-    <a href="#services" class="block py-2 text-gray-700">Services</a>
-    <a href="#contact" class="block py-2 text-gray-700">Contact</a>
+  <!-- Right: Contact Info -->
+  <div class="flex items-center space-x-6 text-sm">
+    <div class="flex items-center space-x-1">
+      <i data-lucide="phone" class="w-4 h-4"></i>
+      <span>+91 78323 23323</span>
+    </div>
+    <div class="flex items-center space-x-1">
+      <i data-lucide="clock" class="w-4 h-4"></i>
+      <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+    </div>
+    <div class="flex items-center space-x-1">
+      <i data-lucide="mail" class="w-4 h-4"></i>
+      <span>info@techuc.in</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- Main Navigation -->
+<!-- Header Container -->
+<header class="bg-white shadow sticky top-0 z-50 relative">
+  <div class="container mx-auto px-4 md:px-16 py-4 flex justify-between items-center">
+    
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="/assets/images/logo-light.svg" alt="Logo" class="h-7">
+    </div>
+
+    <!-- Nav Links + CTA -->
+    <nav class="hidden md:flex items-center space-x-6 font-semibold text-gray-700 relative tracking-tight antialiased">
+
+      <!-- Navigation Links -->
+      <a href="#" class="relative hover:text-blue-600 text-blue-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full">
+        Home
+      </a>
+
+      <!-- Dropdown -->
+      <div class="relative group">
+        <button class="flex items-center gap-1 text-gray-700 group-hover:text-blue-600 font-semibold relative
+                       after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px]
+                       after:bg-blue-600 after:transition-all after:duration-300 group-hover:after:w-full">
+          Embedded R&D
+          <i data-lucide="chevron-down" class="w-4 h-4 transition group-hover:rotate-180"></i>
+        </button>
+
+        <!-- Dropdown Content -->
+        <div class="absolute left-1/2 -translate-x-1/2 top-12 bg-white rounded-xl shadow-xl border-t-4 border-blue-600
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all duration-200 z-50 w-64
+                    before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 
+                    before:w-0 before:h-0
+                    before:border-l-8 before:border-r-8 before:border-b-8 
+                    before:border-l-transparent before:border-r-transparent before:border-b-blue-600">
+          <ul class="py-4 px-6 space-y-4 text-gray-800 text-[15px] font-semibold leading-snug">
+            <li><a href="/product-development.html" class="block hover:text-blue-600 transition">Product Development</a></li>
+            <li><a href="/software-development.html" class="block hover:text-blue-600 transition">Software Development</a></li>
+            <li><a href="/pcb-assembly.html" class="block hover:text-blue-600 transition">PCB & Assembly</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <a href="#" class="relative hover:text-blue-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full">
+        PLC
+      </a>
+
+      <a href="#" class="relative hover:text-blue-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full">
+        IOT Development
+      </a>
+
+      <a href="#" class="relative hover:text-blue-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full">
+        About
+      </a>
+
+      <!-- CTA Button - Now inside nav -->
+      <a href="#contact" class="ml-4 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">
+        Get In Touch
+      </a>
+    </nav>
   </div>
 </header>
+
 
 <!-- Slider / Hero Banner -->
 <section class="relative">
@@ -666,14 +753,6 @@
  <script src="https://unpkg.com/lucide@latest"></script>
 <script>
   lucide.createIcons();
-</script>
-
-<script>
-  // Mobile menu toggle
-  document.getElementById('menu-btn').addEventListener('click', () => {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-  });
 </script>
 
 <!-- SwiperJS Scripts -->
