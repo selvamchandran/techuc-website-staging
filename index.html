@@ -31,25 +31,6 @@
 <body class="bg-white text-gray-800">
 
 <!-- Top Info Bar -->
-<!-- <div class="bg-gray-100 text-sm text-gray-700 px-4 md:px-16 py-2 flex justify-between items-center">
-  <p>Dmummy Info</p>
-  <div class="flex items-center space-x-6 text-sm">
-    <div class="flex items-center space-x-1">
-      <i data-lucide="phone" class="w-4 h-4"></i>
-      <span>+91 78323 23323</span>
-    </div>
-    <div class="flex items-center space-x-1">
-      <i data-lucide="clock" class="w-4 h-4"></i>
-      <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
-    </div>
-    <div class="flex items-center space-x-1">
-      <i data-lucide="mail" class="w-4 h-4"></i>
-      <span>info@techuc.in</span>
-    </div>
-  </div>
-</div> -->
-
-<!-- Top Info Bar -->
 <div class="bg-gray-100 text-sm text-gray-700 px-4 md:px-16 py-2 flex justify-between items-center">
 
   <!-- Left: Social Icons -->
@@ -92,56 +73,77 @@
     
     <!-- Logo -->
     <div class="flex items-center space-x-2">
-      <img src="/assets/images/logo-light.svg" alt="Logo" class="h-7">
-    </div>
+      <img src="assets/images/logo-light.svg" alt="Logo" class="h-7">
+      </div>
 
     <!-- Nav Links + CTA -->
     <nav class="hidden md:flex items-center space-x-6 font-semibold text-gray-700 relative tracking-tight antialiased">
 
       <!-- Navigation Links -->
-      <a href="#" class="relative hover:text-blue-600 text-blue-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full">
-        Home
-      </a>
 
-      <!-- Dropdown -->
-      <div class="relative group">
-        <button class="flex items-center gap-1 text-gray-700 group-hover:text-blue-600 font-semibold relative
-                       after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px]
-                       after:bg-blue-600 after:transition-all after:duration-300 group-hover:after:w-full">
-          Embedded R&D
-          <i data-lucide="chevron-down" class="w-4 h-4 transition group-hover:rotate-180"></i>
-        </button>
+      <a href="#"
+   class="relative block px-3 py-2 text-blue-600 font-semibold hover:text-blue-600
+          after:absolute after:left-1/2 after:-bottom-1 after:-translate-x-1/2
+          after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300
+          hover:after:w-full">
+  Home
+</a>
 
-        <!-- Dropdown Content -->
-        <div class="absolute left-1/2 -translate-x-1/2 top-12 bg-white rounded-xl shadow-xl border-t-4 border-blue-600
-                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                    transition-all duration-200 z-50 w-64
-                    before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 
-                    before:w-0 before:h-0
-                    before:border-l-8 before:border-r-8 before:border-b-8 
-                    before:border-l-transparent before:border-r-transparent before:border-b-blue-600">
-          <ul class="py-4 px-6 space-y-4 text-gray-800 text-[15px] font-semibold leading-snug">
-            <li><a href="/product-development.html" class="block hover:text-blue-600 transition">Product Development</a></li>
-            <li><a href="/software-development.html" class="block hover:text-blue-600 transition">Software Development</a></li>
-            <li><a href="/pcb-assembly.html" class="block hover:text-blue-600 transition">PCB & Assembly</a></li>
-          </ul>
-        </div>
-      </div>
+<div class="relative group">
+  <!-- Parent Button -->
+  <button class="relative flex items-center gap-1 px-3 py-2 text-gray-700 font-semibold
+                 group-hover:text-blue-600 hover:text-blue-600
+                 after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1
+                 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300
+                 group-hover:after:w-full hover:after:w-full">
+    Embedded R&D
+    <i data-lucide="chevron-down" class="w-4 h-4 transition group-hover:rotate-180"></i>
+  </button>
 
-      <a href="#" class="relative hover:text-blue-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full">
-        PLC
-      </a>
+  <!-- Dropdown Menu -->
+  <div class="absolute left-1/2 -translate-x-1/2 top-12 bg-white rounded-xl shadow-xl border-t-4 border-blue-600
+              opacity-0 invisible group-hover:opacity-100 group-hover:visible
+              transition-all duration-200 z-50 w-64
+              before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 
+              before:w-0 before:h-0
+              before:border-l-8 before:border-r-8 before:border-b-8 
+              before:border-l-transparent before:border-r-transparent before:border-b-blue-600">
+    <ul class="py-4 px-6 space-y-4 text-gray-800 text-[15px] font-semibold leading-snug">
+      <li><a href="/product-development.html" class="block hover:text-blue-600 transition">Product Development</a></li>
+      <li><a href="/software-development.html" class="block hover:text-blue-600 transition">Software Development</a></li>
+      <li><a href="/pcb-assembly.html" class="block hover:text-blue-600 transition">PCB & Assembly</a></li>
+    </ul>
+  </div>
+</div>
 
-      <a href="#" class="relative hover:text-blue-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full">
-        IOT Development
-      </a>
+      <a href="#"
+   class="relative block px-3 py-2 text-gray-700 font-semibold hover:text-blue-600
+          after:absolute after:left-1/2 after:-bottom-1 after:-translate-x-1/2
+          after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300
+          hover:after:w-full">
+  PLC
+</a>
+      
 
-      <a href="#" class="relative hover:text-blue-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full">
-        About
-      </a>
+      <a href="#"
+   class="relative block px-3 py-2 text-gray-700 font-semibold hover:text-blue-600
+          after:absolute after:left-1/2 after:-bottom-1 after:-translate-x-1/2
+          after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300
+          hover:after:w-full">
+   IOT Development
+</a>
+      
+
+        <a href="about-us.html"
+   class="relative block px-3 py-2 text-gray-700 font-semibold hover:text-blue-600
+          after:absolute after:left-1/2 after:-bottom-1 after:-translate-x-1/2
+          after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300
+          hover:after:w-full">
+   About
+</a>
 
       <!-- CTA Button - Now inside nav -->
-      <a href="#contact" class="ml-4 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">
+      <a href="contact.html" class="ml-4 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">
         Get In Touch
       </a>
     </nav>
@@ -193,6 +195,19 @@
   </div>
 </section>
 
+<section class="bg-[#E6F2FB] py-16 px-6 md:px-24 text-center">
+  <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+    Ready to Start Your Project?
+  </h2>
+  <p class="text-gray-600 mb-8 max-w-xl mx-auto">
+    Let’s build something great together. Our expert team is here to help you with reliable and innovative tech solutions.
+  </p>
+  <a href="#contact"
+     class="inline-block bg-[#1374BA] hover:bg-[#0f5c95] text-white font-semibold text-sm md:text-base px-8 py-3 rounded-md shadow-md transition">
+    Get In Touch
+  </a>
+</section>
+
 <!-- What We Do Section -->
 <section class="bg-white-50 py-20 px-6 md:px-[75px]">
     <!-- Section Heading -->
@@ -201,11 +216,11 @@
     <!-- Block 1 -->
     <div class="flex flex-col md:flex-row items-center mb-20 gap-12">
       <div class="md:w-1/2" data-aos="fade-right">
-        <h3 class="text-2xl font-semibold text-blue-900 mb-4">R & D Services</h3>
+        <h3 class="text-2xl font-semibold text-blue-900 mb-4">Embedded R & D</h3>
         <div class="h-1 w-12 bg-blue-800 mb-6"></div>
         <ul class="list-disc list-inside text-gray-700 space-y-4 mb-6">
-          <li>We upskill and scale ourselves with continuous learning to lead an innovation driven business approach.</li>
-          <li>R&D has been a process of our business stimulus and drives us every single day.</li>
+          <li>Embedded R&D offers end-to-end solutions in embedded systems, including product design, PCB development and assembly solutions, firmware programming, and IoT integration.</li>
+          <li>We specialize in creating smart, efficient, and reliable embedded products for various applications.</li>
         </ul>
         <a href="#"
            class="inline-flex items-center bg-cyan-500 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-cyan-600 transition">
@@ -225,11 +240,11 @@
     <!-- Block 2 -->
     <div class="flex flex-col md:flex-row-reverse items-center mb-20 gap-12">
       <div class="md:w-1/2" data-aos="fade-left">
-        <h3 class="text-2xl font-semibold text-blue-900 mb-4">Product Development</h3>
+        <h3 class="text-2xl font-semibold text-blue-900 mb-4">PLC Automation</h3>
         <div class="h-1 w-12 bg-blue-800 mb-6"></div>
         <ul class="list-disc list-inside text-gray-700 space-y-4 mb-6">
-          <li>We develop tailor-made products aligning with customer vision.</li>
-          <li>Our team is equipped to handle the full product lifecycle from concept to deployment.</li>
+          <li>PLC Automation includes customized solutions using PLCs, HMIs, and IoT for smart industrial control and monitoring.</li>
+          <li>We deliver efficient automation with real-time data, SCADA integration, and cloud connectivity.</li>
         </ul>
         <a href="#"
            class="inline-flex items-center bg-cyan-500 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-cyan-600 transition">
@@ -252,8 +267,8 @@
         <h3 class="text-2xl font-semibold text-blue-900 mb-4">IoT & Embedded Solutions</h3>
         <div class="h-1 w-12 bg-blue-800 mb-6"></div>
         <ul class="list-disc list-inside text-gray-700 space-y-4 mb-6">
-          <li>We specialize in smart IoT integration and embedded system design.</li>
-          <li>Our solutions are built for scalability, security, and performance.</li>
+          <li>IoT Development includes designing and building connected solutions that integrate sensors, devices, cloud platforms, and mobile apps. </li>
+          <li>We deliver smart, scalable IoT systems for real-time monitoring, automation, and data-driven decision-making across industries.</li>
         </ul>
         <a href="#"
            class="inline-flex items-center bg-cyan-500 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-cyan-600 transition">
@@ -589,22 +604,34 @@
 
     <!-- Column 2: Services -->
     <div>
-      <h3 class="text-lg font-semibold text-white mb-4">Embedded Development</h3>
+      <h3 class="text-lg font-semibold text-white mb-4">Embedded R & D</h3>
       <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-white">Embedded Industrial Automation</a></li>
-        <li><a href="#" class="hover:text-white">Embedded Industrial Automation</a></li>
-        <li><a href="#" class="hover:text-white">Products Development</a></li>
-        <li><a href="#" class="hover:text-white">IoT Development</a></li>
-        <li><a href="#" class="hover:text-white">Embedded Home Automation</a></li>
-        <li><a href="#" class="hover:text-white">Security Systems</a></li>
+        <li><a href="#"
+       class="text-gray-300 hover:text-white hover:ml-[5px] transition-all duration-200">
+     Product Development
+    </a></li>
+        <li><a href="#"
+       class="text-gray-300 hover:text-white hover:ml-[5px] transition-all duration-200">
+     Software Development
+    </a></li>
+      <li><a href="#"
+       class="text-gray-300 hover:text-white hover:ml-[5px] transition-all duration-200">
+     PCB Assembly
+    </a></li>
       </ul>
     </div>
 
     <div>
-      <h3 class="text-lg font-semibold text-white mb-4">PLC Automation</h3>
+      <h3 class="text-lg font-semibold text-white mb-4">Services</h3>
       <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-white">Industrial Automation</a></li>
-        <li><a href="#" class="hover:text-white">Conveyor Automation</a></li>
+       <li><a href="#"
+       class="text-gray-300 hover:text-white hover:ml-[5px] transition-all duration-200">
+     PLC
+    </a></li>
+      <li><a href="#"
+       class="text-gray-300 hover:text-white hover:ml-[5px] transition-all duration-200">
+     IoT Development
+    </a></li>
       </ul>
     </div>
 
@@ -612,8 +639,14 @@
     <div>
       <h3 class="text-lg font-semibold text-white mb-4">Company</h3>
       <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-white">About Us</a></li>
-        <li><a href="#" class="hover:text-white">Contact</a></li>
+      <li><a href="about-us.html"
+       class="text-gray-300 hover:text-white hover:ml-[5px] transition-all duration-200">
+    About Us
+    </a></li>
+      <li><a href="contact.html"
+       class="text-gray-300 hover:text-white hover:ml-[5px] transition-all duration-200">
+     Contact Us
+    </a></li>
       </ul>
     </div>
 
@@ -621,8 +654,14 @@
     <div>
       <h3 class="text-lg font-semibold text-white mb-4">Follow Us</h3>
       <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-white">LinkedIn</a></li>
-        <li><a href="#" class="hover:text-white">Facebook</a></li>
+        <li><a href="#linkedin"
+       class="text-gray-300 hover:text-white hover:ml-[5px] transition-all duration-200">
+    LinkedIn
+    </a></li>
+      <li><a href="#fb"
+       class="text-gray-300 hover:text-white hover:ml-[5px] transition-all duration-200">
+     Facebook
+    </a></li>
       </ul>
     </div>
 
@@ -633,87 +672,6 @@
     © 2025 TechUC. All rights reserved.
   </div>
 </footer>
-
-<footer class="bg-blue-900 text-gray-300 px-6 md:px-[75px] py-16">
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
-  <!-- Column 1: Company Info -->
-<div>
-  <p class="text-sm mb-2 text-gray-400">GSTIN : <span class="text-white font-medium">33ABCDE1234F1Z5</span></p>
-  
-  <h2 class="text-xl font-bold text-white mb-4">Techuc Automation</h2>
-
-  <!-- Address -->
-  <div class="flex items-start mb-2 text-sm">
-    <i data-lucide="map-pin" class="w-4 h-4 mt-1 mr-2 text-gray-400"></i>
-    <div>
-      <p>New No : 74, 2nd Floor,</p>
-      <p>Nehru Street, Ramnagar,</p>
-      <p>Gandhipuram,</p>
-      <p>Coimbatore,</p>
-      <p>Tamil Nadu - 641 009.</p>
-    </div>
-  </div>
-
-  <!-- Phone -->
-  <div class="flex items-center mb-2 text-sm">
-    <i data-lucide="phone" class="w-4 h-4 mr-2 text-gray-400"></i>
-    <a href="tel:+919876543210" class="hover:text-white">+91 98765 43210</a>
-  </div>
-
-  <!-- Email -->
-  <div class="flex items-center text-sm">
-    <i data-lucide="mail" class="w-4 h-4 mr-2 text-gray-400"></i>
-    <a href="mailto:info@techuc.in" class="hover:text-white">info@techuc.in</a>
-  </div>
-</div>
-
-    <!-- Column 2: Services -->
-    <div>
-      <h3 class="text-lg font-semibold text-white mb-4">Embedded Development</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-white">Embedded Industrial Automation</a></li>
-        <li><a href="#" class="hover:text-white">Embedded Industrial Automation</a></li>
-        <li><a href="#" class="hover:text-white">Products Development</a></li>
-        <li><a href="#" class="hover:text-white">IoT Development</a></li>
-        <li><a href="#" class="hover:text-white">Embedded Home Automation</a></li>
-        <li><a href="#" class="hover:text-white">Security Systems</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h3 class="text-lg font-semibold text-white mb-4">PLC Automation</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-white">Industrial Automation</a></li>
-        <li><a href="#" class="hover:text-white">Conveyor Automation</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 3: Company -->
-    <div>
-      <h3 class="text-lg font-semibold text-white mb-4">Company</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-white">About Us</a></li>
-        <li><a href="#" class="hover:text-white">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 5: Follow Us -->
-    <div>
-      <h3 class="text-lg font-semibold text-white mb-4">Follow Us</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-white">LinkedIn</a></li>
-        <li><a href="#" class="hover:text-white">Facebook</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- Bottom Bar -->
-  <div class="mt-12 border-t border-gray-700 pt-6 text-sm text-center text-gray-500">
-    © 2025 TechUC. All rights reserved.
-  </div>
-</footer>
-
 
 <!-- Scroll to Top Button -->
 <button id="scrollToTopBtn"
