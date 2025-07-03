@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Embedded Software Development - IoT Development | Techuc | Coimbatore</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- AOS Library CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+
+  <!-- SwiperJS Styles -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- Top Info Bar -->
+<!-- <div class="bg-gray-100 text-sm text-gray-700 px-4 md:px-16 py-2 flex justify-between items-center">
+  <p>Dmummy Info</p>
+  <div class="flex items-center space-x-6 text-sm">
+    <div class="flex items-center space-x-1">
+      <i data-lucide="phone" class="w-4 h-4"></i>
+      <span>+91 78323 23323</span>
+    </div>
+    <div class="flex items-center space-x-1">
+      <i data-lucide="clock" class="w-4 h-4"></i>
+      <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+    </div>
+    <div class="flex items-center space-x-1">
+      <i data-lucide="mail" class="w-4 h-4"></i>
+      <span>info@techuc.in</span>
+    </div>
+  </div>
+</div> -->
+
+<!-- Top Info Bar -->
+<div class="bg-gray-100 text-sm text-gray-700 px-4 md:px-16 py-2 flex justify-between items-center">
+
+  <!-- Left: Social Icons -->
+  <div class="flex items-center space-x-4">
+    <a href="https://facebook.com/yourpage" target="_blank" class="hover:opacity-80 transition">
+      <svg class="w-6 h-6 fill-blue-600" viewBox="0 0 24 24">
+        <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99h-2.54V12h2.54V9.8c0-2.51 1.5-3.89 3.8-3.89 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.78-1.64 1.58V12h2.8l-.45 2.89h-2.35v6.99C18.34 21.13 22 16.99 22 12z"/>
+      </svg>
+    </a>
+
+    <a href="https://linkedin.com/company/yourpage" target="_blank" class="hover:opacity-80 transition">
+      <svg class="w-5 h-5 fill-blue-700" viewBox="0 0 24 24">
+        <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.77 0 5-2.24 5-5v-14c0-2.76-2.23-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 11.28h-3v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85v5.5h-3v-10h2.88v1.36h.04c.4-.75 1.4-1.54 2.88-1.54 3.08 0 3.64 2.03 3.64 4.67v5.51z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Right: Contact Info -->
+  <div class="flex items-center space-x-6 text-sm">
+    <div class="flex items-center space-x-1">
+      <i data-lucide="phone" class="w-4 h-4"></i>
+      <span>+91 78323 23323</span>
+    </div>
+    <div class="flex items-center space-x-1">
+      <i data-lucide="clock" class="w-4 h-4"></i>
+      <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+    </div>
+    <div class="flex items-center space-x-1">
+      <i data-lucide="mail" class="w-4 h-4"></i>
+      <span>info@techuc.in</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- Main Navigation -->
+ <header class="bg-white shadow sticky top-0 z-50">
+  <div class="container mx-auto px-4 md:px-16 py-4 flex justify-between items-center">
+
+<!-- <header class="bg-white shadow z-50 relative">
+  <div class="container mx-auto px-4 md:px-16 py-4 flex justify-between items-center">
+     -->
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="/assets/images/logo-light.svg" alt="Logo" class="h-7">
+    </div>
+
+    <!-- Nav Links -->
+    <nav class="hidden md:flex space-x-6 font-semibold text-gray-700 relative tracking-tight antialiased">
+
+
+        <a href="#" class="relative hover:text-blue-600 text-blue-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full">
+          Home
+        </a>
+        
+      <!-- Parent Menu Item with Dropdown -->
+      <div class="relative group">
+        <!-- Button with underline effect that stays on group-hover -->
+        <button class="flex items-center gap-1 text-gray-700 font-semibold relative 
+                      group-hover:text-blue-600 transition
+                      after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] 
+                      after:bg-blue-600 after:transition-all after:duration-300 
+                      group-hover:after:w-full">
+          Embedded R&D
+          <i data-lucide="chevron-down" class="w-4 h-4 transition group-hover:rotate-180"></i>
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div
+          class="absolute left-1/2 -translate-x-1/2 top-12 bg-white rounded-xl shadow-xl border-t-4 border-blue-600
+                opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                transition-all duration-200 z-50 w-64
+                before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 
+                before:w-0 before:h-0
+                before:border-l-8 before:border-r-8 before:border-b-8 
+                before:border-l-transparent before:border-r-transparent before:border-b-blue-600">
+          
+          <ul class="py-4 px-6 space-y-4 text-gray-800 text-[15px] font-semibold leading-snug">
+            <li>
+              <a href="/product-development.html" class="block hover:text-blue-600 transition">Product Development</a>
+            </li>
+            <li>
+              <a href="/software-development.html" class="block hover:text-blue-600 transition">Software Development</a>
+            </li>
+            <li>
+              <a href="/pcb-assembly.html" class="block hover:text-blue-600 transition">PCB & Assembly</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      
+    <a href="#" class="relative hover:text-blue-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full">
+  PLC
+</a>
+
+
+    <a href="#" class="relative hover:text-blue-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full">
+  IOT Development
+</a>
+
+
+    <a href="#" class="relative hover:text-blue-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full">
+  About
+</a>
+
+</nav>
+
+    <!-- CTA Button -->
+    <div class="hidden md:block">
+      <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">Get In Touch</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- Slider / Hero Banner -->
+<section class="relative">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="h-[80vh] bg-cover bg-center flex items-center justify-center text-white"
+          style="background-image: url('assets/images/slider/1.jpg')">
+          <div class="bg-black/50 p-8 rounded-lg">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Empowering Tech Solutions</h2>
+            <p class="text-lg mb-6">Innovative, scalable, and reliable digital services tailored for your business.</p>
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-md text-white transition">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="h-[80vh] bg-cover bg-center flex items-center justify-center text-white"
+          style="background-image: url('assets/images/slider/2.jpg')">
+          <div class="bg-black/50 p-8 rounded-lg text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Driven by Innovation</h2>
+            <p class="text-lg mb-6">We craft reliable systems to support your business growth.</p>
+            <a href="#about" class="bg-white text-blue-600 px-6 py-3 rounded-md transition hover:bg-gray-100">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more slides as needed -->
+    </div>
+
+    <!-- Swiper navigation buttons -->
+    <div class="swiper-button-next text-white"></div>
+    <div class="swiper-button-prev text-white"></div>
+
+    <!-- Swiper pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- What We Do Section -->
+<section class="bg-white-50 py-20 px-6 md:px-[75px]">
+    <!-- Section Heading -->
+    <h2 class="text-4xl font-bold text-center text-blue-900 mb-12">What We Do?</h2>
+
+    <!-- Block 1 -->
+    <div class="flex flex-col md:flex-row items-center mb-20 gap-12">
+      <div class="md:w-1/2" data-aos="fade-right">
+        <h3 class="text-2xl font-semibold text-blue-900 mb-4">R & D Services</h3>
+        <div class="h-1 w-12 bg-blue-800 mb-6"></div>
+        <ul class="list-disc list-inside text-gray-700 space-y-4 mb-6">
+          <li>We upskill and scale ourselves with continuous learning to lead an innovation driven business approach.</li>
+          <li>R&D has been a process of our business stimulus and drives us every single day.</li>
+        </ul>
+        <a href="#"
+           class="inline-flex items-center bg-cyan-500 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-cyan-600 transition">
+          Read more
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+      <div class="md:w-1/2" data-aos="fade-left">
+        <img src="assets/images/rd-services.jpg" alt="R&D Illustration" class="rounded-xl shadow-lg w-full max-w-lg mx-auto">
+      </div>
+    </div>
+
+    <!-- Block 2 -->
+    <div class="flex flex-col md:flex-row-reverse items-center mb-20 gap-12">
+      <div class="md:w-1/2" data-aos="fade-left">
+        <h3 class="text-2xl font-semibold text-blue-900 mb-4">Product Development</h3>
+        <div class="h-1 w-12 bg-blue-800 mb-6"></div>
+        <ul class="list-disc list-inside text-gray-700 space-y-4 mb-6">
+          <li>We develop tailor-made products aligning with customer vision.</li>
+          <li>Our team is equipped to handle the full product lifecycle from concept to deployment.</li>
+        </ul>
+        <a href="#"
+           class="inline-flex items-center bg-cyan-500 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-cyan-600 transition">
+          Read more
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+      <div class="md:w-1/2" data-aos="fade-right">
+        <img src="assets/images/rd-services.jpg" alt="Product Development" class="rounded-xl shadow-lg w-full max-w-lg mx-auto">
+      </div>
+    </div>
+
+    <!-- Block 3 -->
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2" data-aos="fade-right">
+        <h3 class="text-2xl font-semibold text-blue-900 mb-4">IoT & Embedded Solutions</h3>
+        <div class="h-1 w-12 bg-blue-800 mb-6"></div>
+        <ul class="list-disc list-inside text-gray-700 space-y-4 mb-6">
+          <li>We specialize in smart IoT integration and embedded system design.</li>
+          <li>Our solutions are built for scalability, security, and performance.</li>
+        </ul>
+        <a href="#"
+           class="inline-flex items-center bg-cyan-500 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-cyan-600 transition">
+          Read more
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+      <div class="md:w-1/2" data-aos="fade-left">
+        <img src="assets/images/rd-services.jpg" alt="IoT Solutions" class="rounded-xl shadow-lg w-full max-w-lg mx-auto">
+      </div>
+    </div>
+
+</section>
+
+<section class="bg-gray-50 py-20 px-6 md:px-[75px]" id="industry-presence">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold mb-4">Industry Presence</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto">We have a strong presence in various sectors delivering innovative solutions tailored to each industry’s needs.</p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" data-aos="fade-up">
+    <!-- Card 1 -->
+    <div class="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-2xl transition">
+      <img src="assets/images/iot.png" alt="Agriculture" class="w-16 h-16 mx-auto mb-4">
+      <h3 class="text-xl font-semibold mb-2">Agriculture</h3>
+      <p class="text-gray-600 text-sm">Empowering smart farming solutions for efficient crop management and automation.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-2xl transition">
+      <img src="assets/images/support.png" alt="Industrial IoT" class="w-16 h-16 mx-auto mb-4">
+      <h3 class="text-xl font-semibold mb-2">Industrial IoT</h3>
+      <p class="text-gray-600 text-sm">Connecting machines and processes with real-time data and predictive analytics.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-2xl transition">
+      <img src="assets/images/automation.png" alt="Automotive" class="w-16 h-16 mx-auto mb-4">
+      <h3 class="text-xl font-semibold mb-2">Automotive</h3>
+      <p class="text-gray-600 text-sm">Delivering embedded solutions for smarter and safer mobility.</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-2xl transition">
+      <img src="assets/images/support.png" alt="Agriculture" class="w-16 h-16 mx-auto mb-4">
+      <h3 class="text-xl font-semibold mb-2">Agriculture</h3>
+      <p class="text-gray-600 text-sm">Empowering smart farming solutions for efficient crop management and automation.</p>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-2xl transition">
+      <img src="assets/images/automation.png" alt="Industrial IoT" class="w-16 h-16 mx-auto mb-4">
+      <h3 class="text-xl font-semibold mb-2">Industrial IoT</h3>
+      <p class="text-gray-600 text-sm">Connecting machines and processes with real-time data and predictive analytics.</p>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-2xl transition">
+      <img src="assets/images/iot.png" alt="Automotive" class="w-16 h-16 mx-auto mb-4">
+      <h3 class="text-xl font-semibold mb-2">Automotive</h3>
+      <p class="text-gray-600 text-sm">Delivering embedded solutions for smarter and safer mobility.</p>
+    </div>
+
+    <!-- Add more cards as needed -->
+  </div>
+</section>
+
+<section class="bg-white py-20 px-6 md:px-[75px]" id="why-work-with-us">
+  <div class="text-center mb-14">
+    <h2 class="text-4xl font-bold text-gray-800 mb-4">Why choose TechUC?</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+      Here's what sets us apart as your trusted tech partner.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10" data-aos="fade-up">
+    
+    <!-- Card 1 -->
+    <div class="relative bg-white rounded-3xl p-8 shadow-lg transition-all duration-300 group hover:scale-[1.03] hover:ring-4 hover:ring-blue-300">
+      <div class="flex justify-center mb-6">
+        <lord-icon
+          src="https://cdn.lordicon.com/zpxybbhl.json"
+          trigger="hover"
+          colors="primary:#0d9488,secondary:#22d3ee"
+          style="width:64px;height:64px">
+        </lord-icon>
+      </div>
+      <h3 class="text-xl font-semibold text-center mb-3 text-gray-800">Expert Team</h3>
+      <p class="text-center text-gray-500 text-sm">
+        Our experienced team brings industry expertise, creativity, and reliable solutions to every project.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="relative bg-white rounded-3xl p-8 shadow-lg transition-all duration-300 group hover:scale-[1.03] hover:ring-4 hover:ring-yellow-300">
+      <div class="flex justify-center mb-6">
+        <lord-icon
+          src="https://cdn.lordicon.com/qhviklyi.json"
+          trigger="hover"
+          colors="primary:#ca8a04,secondary:#fde68a"
+          style="width:64px;height:64px">
+        </lord-icon>
+      </div>
+      <h3 class="text-xl font-semibold text-center mb-3 text-gray-800">Quality First</h3>
+      <p class="text-center text-gray-500 text-sm">
+        We emphasize high-quality results that align with your vision and exceed expectations.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="relative bg-white rounded-3xl p-8 shadow-lg transition-all duration-300 group hover:scale-[1.03] hover:ring-4 hover:ring-green-300">
+      <div class="flex justify-center mb-6">
+        <lord-icon
+          src="https://cdn.lordicon.com/nobciafz.json"
+          trigger="hover"
+          colors="primary:#15803d,secondary:#86efac"
+          style="width:64px;height:64px">
+        </lord-icon>
+      </div>
+      <h3 class="text-xl font-semibold text-center mb-3 text-gray-800">Reliable Support</h3>
+      <p class="text-center text-gray-500 text-sm">
+        We provide dependable and friendly support to ensure a seamless experience for our clients.
+      </p>
+    </div>
+
+    <!-- Card 4 -->
+<div class="relative bg-white rounded-3xl p-8 shadow-lg transition-all duration-300 group hover:scale-[1.03] hover:ring-4 hover:ring-indigo-300">
+  <div class="flex justify-center mb-6">
+    <lord-icon
+      src="https://cdn.lordicon.com/egmlnyku.json"
+      trigger="hover"
+      colors="primary:#4f46e5,secondary:#a5b4fc"
+      style="width:64px;height:64px">
+    </lord-icon>
+  </div>
+  <h3 class="text-xl font-semibold text-center mb-3 text-gray-800">Tailored Solutions</h3>
+  <p class="text-center text-gray-500 text-sm">
+    We craft customized solutions that align with your unique business needs and goals.
+  </p>
+</div>
+
+<!-- Card 5 -->
+<div class="relative bg-white rounded-3xl p-8 shadow-lg transition-all duration-300 group hover:scale-[1.03] hover:ring-4 hover:ring-pink-300">
+  <div class="flex justify-center mb-6">
+    <lord-icon
+      src="https://cdn.lordicon.com/dnmvmpfk.json"
+      trigger="hover"
+      colors="primary:#db2777,secondary:#f9a8d4"
+      style="width:64px;height:64px">
+    </lord-icon>
+  </div>
+  <h3 class="text-xl font-semibold text-center mb-3 text-gray-800">Client-Centric Approach</h3>
+  <p class="text-center text-gray-500 text-sm">
+    We prioritize your satisfaction by working closely and transparently through every step.
+  </p>
+</div>
+
+<!-- Card 6 -->
+<div class="relative bg-white rounded-3xl p-8 shadow-lg transition-all duration-300 group hover:scale-[1.03] hover:ring-4 hover:ring-cyan-300">
+  <div class="flex justify-center mb-6">
+    <lord-icon
+      src="https://cdn.lordicon.com/urhcgqxz.json"
+      trigger="hover"
+      colors="primary:#06b6d4,secondary:#67e8f9"
+      style="width:64px;height:64px">
+    </lord-icon>
+  </div>
+  <h3 class="text-xl font-semibold text-center mb-3 text-gray-800">On-Time Delivery</h3>
+  <p class="text-center text-gray-500 text-sm">
+    We respect deadlines and ensure timely delivery without compromising on quality.
+  </p>
+</div>
+
+  </div>
+</section>
+
+<section class="bg-gray-50 py-20 px-6 md:px-[75px]" id="milestones">
+  <div class="text-center mb-14">
+    <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Milestones</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+      Celebrating our journey and achievements
+    </p>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center" data-aos="fade-up">
+    
+    <!-- Card 1 -->
+    <div class="relative bg-blue-600 rounded-xl shadow-md p-4 w-40 text-center transition-transform duration-300 hover:scale-105">
+      <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+        <div class="bg-blue-100 text-blue-600 rounded-full p-3 shadow">
+          <i data-lucide="briefcase" class="w-6 h-6"></i>
+        </div>
+      </div>
+      <div class="pt-8">
+        <h3 class="text-xl font-bold text-white">
+          <span class="countup" data-count="120">0</span>+
+        </h3>
+        <p class="text-white text-sm">Projects</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="relative bg-blue-600 rounded-xl shadow-md p-4 w-40 text-center transition-transform duration-300 hover:scale-105">
+      <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+        <div class="bg-green-100 text-green-600 rounded-full p-3 shadow">
+          <i data-lucide="users" class="w-6 h-6"></i>
+        </div>
+      </div>
+      <div class="pt-8">
+        <h3 class="text-xl font-bold text-white">
+          <span class="countup" data-count="75">0</span>+
+        </h3>
+        <p class="text-white text-sm">Clients</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="relative bg-blue-600 rounded-xl shadow-md p-4 w-40 text-center transition-transform duration-300 hover:scale-105">
+      <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+        <div class="bg-yellow-100 text-yellow-600 rounded-full p-3 shadow">
+          <i data-lucide="clock" class="w-6 h-6"></i>
+        </div>
+      </div>
+      <div class="pt-8">
+        <h3 class="text-xl font-bold text-white">
+          <span class="countup" data-count="5">0</span>+
+        </h3>
+        <p class="text-white text-sm">Years</p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="relative bg-blue-600 rounded-xl shadow-md p-4 w-40 text-center transition-transform duration-300 hover:scale-105">
+      <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+        <div class="bg-red-100 text-red-600 rounded-full p-3 shadow">
+          <i data-lucide="award" class="w-6 h-6"></i>
+        </div>
+      </div>
+      <div class="pt-8">
+        <h3 class="text-xl font-bold text-white">
+          <span class="countup" data-count="12">0</span>+
+        </h3>
+        <p class="text-white text-sm">Awards</p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="relative bg-blue-600 rounded-xl shadow-md p-4 w-40 text-center transition-transform duration-300 hover:scale-105">
+      <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+        <div class="bg-indigo-100 text-indigo-600 rounded-full p-3 shadow">
+          <i data-lucide="globe" class="w-6 h-6"></i>
+        </div>
+      </div>
+      <div class="pt-8">
+        <h3 class="text-xl font-bold text-white">
+          <span class="countup" data-count="10">0</span>+
+        </h3>
+        <p class="text-white text-sm">Countries</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-20 px-6 md:px-[75px]" id="clients">
+  <div class="text-center mb-14">
+    <h2 class="text-4xl font-bold text-gray-800 mb-4">Trusted By Leading Brands</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+      We're proud to have worked with these amazing clients across industries.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-center" data-aos="fade-up">
+    
+    <!-- Placeholder Logos -->
+    <div class="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+      <img src="https://placehold.co/120x60?text=Client+1" alt="Client 1" class="max-h-12 object-contain">
+    </div>
+    <div class="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+      <img src="https://placehold.co/120x60?text=Client+2" alt="Client 2" class="max-h-12 object-contain">
+    </div>
+    <div class="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+      <img src="https://placehold.co/120x60?text=Client+3" alt="Client 3" class="max-h-12 object-contain">
+    </div>
+    <div class="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+      <img src="https://placehold.co/120x60?text=Client+4" alt="Client 4" class="max-h-12 object-contain">
+    </div>
+    <div class="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+      <img src="https://placehold.co/120x60?text=Client+5" alt="Client 5" class="max-h-12 object-contain">
+    </div>
+    <div class="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+      <img src="https://placehold.co/120x60?text=Client+6" alt="Client 6" class="max-h-12 object-contain">
+    </div>
+    
+  </div>
+</section>
+
+<footer class="bg-gray-900 text-gray-300 px-6 md:px-[75px] py-16">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+  <!-- Column 1: Company Info -->
+<div>
+  <p class="text-sm mb-2 text-gray-400">GSTIN : <span class="text-white font-medium">33ABCDE1234F1Z5</span></p>
+  
+  <h2 class="text-xl font-bold text-white mb-4">Techuc Automation</h2>
+
+  <!-- Address -->
+  <div class="flex items-start mb-2 text-sm">
+    <i data-lucide="map-pin" class="w-4 h-4 mt-1 mr-2 text-gray-400"></i>
+    <div>
+      <p>New No : 74, 2nd Floor,</p>
+      <p>Nehru Street, Ramnagar,</p>
+      <p>Gandhipuram,</p>
+      <p>Coimbatore,</p>
+      <p>Tamil Nadu - 641 009.</p>
+    </div>
+  </div>
+
+  <!-- Phone -->
+  <div class="flex items-center mb-2 text-sm">
+    <i data-lucide="phone" class="w-4 h-4 mr-2 text-gray-400"></i>
+    <a href="tel:+919876543210" class="hover:text-white">+91 98765 43210</a>
+  </div>
+
+  <!-- Email -->
+  <div class="flex items-center text-sm">
+    <i data-lucide="mail" class="w-4 h-4 mr-2 text-gray-400"></i>
+    <a href="mailto:info@techuc.in" class="hover:text-white">info@techuc.in</a>
+  </div>
+</div>
+
+    <!-- Column 2: Services -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">Embedded Development</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-white">Embedded Industrial Automation</a></li>
+        <li><a href="#" class="hover:text-white">Embedded Industrial Automation</a></li>
+        <li><a href="#" class="hover:text-white">Products Development</a></li>
+        <li><a href="#" class="hover:text-white">IoT Development</a></li>
+        <li><a href="#" class="hover:text-white">Embedded Home Automation</a></li>
+        <li><a href="#" class="hover:text-white">Security Systems</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">PLC Automation</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-white">Industrial Automation</a></li>
+        <li><a href="#" class="hover:text-white">Conveyor Automation</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Company -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">Company</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-white">About Us</a></li>
+        <li><a href="#" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 5: Follow Us -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">Follow Us</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-white">LinkedIn</a></li>
+        <li><a href="#" class="hover:text-white">Facebook</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="mt-12 border-t border-gray-700 pt-6 text-sm text-center text-gray-500">
+    © 2025 TechUC. All rights reserved.
+  </div>
+</footer>
+
+<footer class="bg-blue-900 text-gray-300 px-6 md:px-[75px] py-16">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+  <!-- Column 1: Company Info -->
+<div>
+  <p class="text-sm mb-2 text-gray-400">GSTIN : <span class="text-white font-medium">33ABCDE1234F1Z5</span></p>
+  
+  <h2 class="text-xl font-bold text-white mb-4">Techuc Automation</h2>
+
+  <!-- Address -->
+  <div class="flex items-start mb-2 text-sm">
+    <i data-lucide="map-pin" class="w-4 h-4 mt-1 mr-2 text-gray-400"></i>
+    <div>
+      <p>New No : 74, 2nd Floor,</p>
+      <p>Nehru Street, Ramnagar,</p>
+      <p>Gandhipuram,</p>
+      <p>Coimbatore,</p>
+      <p>Tamil Nadu - 641 009.</p>
+    </div>
+  </div>
+
+  <!-- Phone -->
+  <div class="flex items-center mb-2 text-sm">
+    <i data-lucide="phone" class="w-4 h-4 mr-2 text-gray-400"></i>
+    <a href="tel:+919876543210" class="hover:text-white">+91 98765 43210</a>
+  </div>
+
+  <!-- Email -->
+  <div class="flex items-center text-sm">
+    <i data-lucide="mail" class="w-4 h-4 mr-2 text-gray-400"></i>
+    <a href="mailto:info@techuc.in" class="hover:text-white">info@techuc.in</a>
+  </div>
+</div>
+
+    <!-- Column 2: Services -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">Embedded Development</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-white">Embedded Industrial Automation</a></li>
+        <li><a href="#" class="hover:text-white">Embedded Industrial Automation</a></li>
+        <li><a href="#" class="hover:text-white">Products Development</a></li>
+        <li><a href="#" class="hover:text-white">IoT Development</a></li>
+        <li><a href="#" class="hover:text-white">Embedded Home Automation</a></li>
+        <li><a href="#" class="hover:text-white">Security Systems</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">PLC Automation</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-white">Industrial Automation</a></li>
+        <li><a href="#" class="hover:text-white">Conveyor Automation</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Company -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">Company</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-white">About Us</a></li>
+        <li><a href="#" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 5: Follow Us -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">Follow Us</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-white">LinkedIn</a></li>
+        <li><a href="#" class="hover:text-white">Facebook</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="mt-12 border-t border-gray-700 pt-6 text-sm text-center text-gray-500">
+    © 2025 TechUC. All rights reserved.
+  </div>
+</footer>
+
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn"
+        class="hidden fixed bottom-6 right-6 z-50 bg-blue-800 text-white p-3 rounded-full shadow-lg hover:bg-orange-500 transition duration-300"
+        aria-label="Scroll to top">
+  ↑
+</button>
+
+<!-- AOS Library JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true, // animation happens only once
+    duration: 1000 // default animation duration
+  });
+</script>
+
+<script>
+  // Scroll to top button
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.classList.remove('hidden');
+    } else {
+      scrollToTopBtn.classList.add('hidden');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+<!-- CountUp Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.6.2/countUp.umd.js"></script>
+<!-- Lucide Icons -->
+ <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+<!-- SwiperJS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.6.2/dist/countUp.umd.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const options = { duration: 2 };
+    const elements = document.querySelectorAll('.countup');
+
+    elements.forEach(el => {
+      const endVal = parseInt(el.getAttribute('data-count'));
+      const counter = new countUp.CountUp(el, endVal, options);
+      if (!counter.error) {
+        const observer = new IntersectionObserver(([entry]) => {
+          if (entry.isIntersecting) {
+            counter.start();
+            observer.unobserve(el);
+          }
+        }, { threshold: 0.5 });
+        observer.observe(el);
+      } else {
+        console.error(counter.error);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
