@@ -53,9 +53,12 @@
   <p class="mt-2 text-gray-600">We’re here to answer your questions and work together.</p>
 </section>
 
+<!-- Contact Section
+<section class="bg-gray-50 py-16 px-6 md:px-[75px]">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-stretch"> -->
 <!-- Contact Section -->
 <section class="bg-gray-50 py-16 px-6 md:px-[75px]">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-stretch">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.9fr_1.31fr] gap-10 items-stretch">
 
     <!-- Left: Contact Form Panel -->
     <div class="bg-white rounded-2xl shadow-md p-8 flex flex-col justify-between">
@@ -65,28 +68,69 @@
           Request a personalized demo and experience our product in action. Our experts will walk you through its key features and show you how it can address your unique needs.
         </p>
 
-        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- <form class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
           <input type="email" placeholder="Your Email" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
           <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 sm:col-span-2">
           <textarea placeholder="Message" rows="4" class="w-full sm:col-span-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
 
-          <!-- Google reCAPTCHA placeholder -->
+          Google reCAPTCHA placeholder
           <div class="sm:col-span-2">
-            <!-- Replace this with actual reCAPTCHA script when integrating -->
-            <!-- <div class="bg-gray-100 p-4 border rounded text-gray-500 text-sm text-center">
-              [ reCAPTCHA will be here ]
-            </div> -->
-            <div class="g-recaptcha" data-sitekey="6LdskVUrAAAAANoJJB3YJoFeKts4jEkgII2RacCS"></div>
+            <div class="g-recaptcha bg-gray-100 p-4 border rounded text-gray-500 text-sm text-center" data-sitekey=""></div>
           </div>
 
-          <!-- Stylish Button -->
+          Stylish Button
           <div class="sm:col-span-2">
             <button type="submit" class="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:shadow-lg transition duration-300">
               Send Message
             </button>
           </div>
         </form>
+ -->
+
+        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <input type="text" placeholder="Your Name"
+         class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+  <input type="email" placeholder="Your Email"
+         class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+
+
+<div class="relative w-full">
+  <select name="inquiryType"
+          class="appearance-none w-full p-3 border rounded-lg bg-white text-gray-700 font-medium pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required>
+    <option value="" disabled selected>Select Purpose</option>
+    <option value="career">Career</option>
+    <option value="industry">Industry</option>
+  </select>
+  <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+    <i data-lucide="chevron-down" class="w-4 h-4 text-gray-500"></i>
+  </div>
+</div>
+
+
+  <input type="tel" placeholder="Phone Number"
+         class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 sm:col-span-1">
+
+  <textarea placeholder="Message" rows="4"
+            class="w-full sm:col-span-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+
+  <!-- Google reCAPTCHA -->
+  <div class="sm:col-span-2">
+    <div class="g-recaptcha bg-gray-100 p-4 border rounded text-gray-500 text-sm text-center" data-sitekey=""></div>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="sm:col-span-2">
+    <button type="submit"
+            class="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:shadow-lg transition duration-300">
+      Send Message
+    </button>
+  </div>
+</form>
+
       </div>
     </div>
 
@@ -144,16 +188,6 @@
     </div>
 
   </div>
-</section>
-
-<section class="h-[400px] w-full">
-  <iframe
-    class="w-full h-full"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2328.64070591097!2d76.96476908229583!3d11.016761302344971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8595736b8d791%3A0x625af0f4256746cf!2sTechuc+E-Automation!5e0!3m2!1sen!2sin!4v1534338337621" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
 </section>
 
 <section class="py-12 bg-white">
